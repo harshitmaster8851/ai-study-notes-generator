@@ -30,7 +30,7 @@ def get_gemini_response(prompt_template: str, text: str) -> str:
          raise HTTPException(status_code=400, detail="No text available to process.")
          
     try:
-        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         prompt = prompt_template.format(text=text)
         response = model.generate_content(prompt)
         return response.text
