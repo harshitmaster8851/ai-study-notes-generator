@@ -20,7 +20,7 @@ function App() {
     formData.append('file', uploadedFile)
 
     try {
-      const response = await fetch('http://localhost:8000/upload', {
+      const response = await fetch('http://18.204.21.167:8000/upload', {
         method: 'POST',
         body: formData,
       })
@@ -46,7 +46,7 @@ function App() {
     setResult(null)
 
     try {
-      const response = await fetch(`http://localhost:8000/${feature}`, {
+      const response = await fetch(`http://18.204.21.167:8000/${feature}`, {
         method: 'POST',
       })
       const data = await response.json()
